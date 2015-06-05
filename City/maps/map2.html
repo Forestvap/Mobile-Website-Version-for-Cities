@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CITY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="themes/Color.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+<script src="http://maps.google.com/maps/api/js?sensor=true"
+	type="text/javascript"></script>
+	
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+<script src="plugins/jquery-ui-map-3.0-rc/ui/jquery.ui.map.js" type="text/javascript"></script>
+
+	<script>
+    $(document).ready(function() {
+        $("#vbutton").click(function() {
+            alert("clicked");
+        });
+    });
+  </script>
+</head>
+
+<body>
+<div data-role="page" id="map2" data-theme="a">
+		
+		<div data-role="header">
+			<h1>Empire State Building</h1>
+		</div>
+		
+
+		<div data-role="content">
+			<p>Location</p>
+			<div id="map_canvas" style="width: 100%; height: 250px"></div>
+		</div>
+
+		<div data-role="footer">
+			<div data-id="navig" data-role="navbar" data-position="fixed">
+				<ul>
+				<li><a href="#page4">Back</a></li>
+				</ul>
+			</div>
+		</div>
+
+</body>
+<script>
+	$(document).ready(
+			function() {
+					var yourStartLatLng = new google.maps.LatLng(40.741606, -73.987946);
+					$('#map_canvas').gmap({
+						'center' : yourStartLatLng
+					});   
+					$('#map_canvas').gmap('addControl', 'control', google.maps.ControlPosition.RIGHT_TOP);
+					$('#map_canvas').gmap('addMarker', {'position': '40.741606, -73.987946', 'bounds': true } );                                                                                                                                                                                                                
+					
+				
+			});
+</script>
+
+<script type="text/javascript">
+        $('#map2').live("pageshow", function() {
+                $('#map_canvas').gmap('refresh');
+        });
+        $('#map2').live("pageinit", function() {
+                $('#map_canvas').gmap({'center': '40.741606, -73.987946'});
+          
+					$('#map_canvas').gmap('addControl', 'control', google.maps.ControlPosition.RIGHT_TOP);
+					$('#map_canvas').gmap('addMarker', {'position': '40.741606, -73.987946', 'bounds': true } );                                                                                                                                                                                                                
+					
+		});	
+	
+</script>
+<script>
+	$(document).ready(
+			function() {
+					var yourStartLatLng = new google.maps.LatLng(40.763713, -73.983082);
+					$('#map_canvas').gmap({
+						'center' : yourStartLatLng
+					});   
+					$('#map_canvas').gmap('addControl', 'control', google.maps.ControlPosition.RIGHT_TOP);
+					$('#map_canvas').gmap('addMarker', {'position': '40.763713, -73.983082', 'bounds': true } );                                                                                                                                                                                                                
+					
+				
+			});
+</script>
+
+<script type="text/javascript">
+        $('#map2').live("pageshow", function() {
+                $('#map_canvas').gmap('refresh');
+        });
+        $('#map2').live("pageinit", function() {
+                $('#map_canvas').gmap({'center': '40.763713, -73.983082'});
+          
+					$('#map_canvas').gmap('addControl', 'control', google.maps.ControlPosition.RIGHT_TOP);
+					$('#map_canvas').gmap('addMarker', {'position': '40.763713, -73.983082', 'bounds': true } );                                                                                                                                                                                                                
+					
+		});	
+	
+</script>
+<script>
+	$(document).ready(
+			function() {
+					var yourStartLatLng = new google.maps.LatLng(40.763589, -73.982632);
+					$('#map_canvas').gmap({
+						'center' : yourStartLatLng
+					});   
+					$('#map_canvas').gmap('addControl', 'control', google.maps.ControlPosition.RIGHT_TOP);
+					$('#map_canvas').gmap('addMarker', {'position': '40.763589, -73.982632', 'bounds': true } );                                                                                                                                                                                                                
+					
+				
+			});
+</script>
+
+<script type="text/javascript">
+        $('#map2').live("pageshow", function() {
+                $('#map_canvas').gmap('refresh');
+        });
+        $('#map2').live("pageinit", function() {
+                $('#map_canvas').gmap({'center': '40.763589, -73.982632'});
+          
+					$('#map_canvas').gmap('addControl', 'control', google.maps.ControlPosition.RIGHT_TOP);
+					$('#map_canvas').gmap('addMarker', {'position': '40.763589, -73.982632', 'bounds': true } );                                                                                                                                                                                                                
+					
+		});	
+	
+</script>
+<script>
+	$(document).ready(
+			function() {
+					var yourStartLatLng = new google.maps.LatLng(40.780551, -73.955085);
+					$('#map_canvas').gmap({
+						'center' : yourStartLatLng
+					});   
+					$('#map_canvas').gmap('addControl', 'control', google.maps.ControlPosition.RIGHT_TOP);
+					$('#map_canvas').gmap('addMarker', {'position': '40.780551, -73.955085', 'bounds': true } );                                                                                                                                                                                                                
+					
+				
+			});
+</script>
+
+<script type="text/javascript">
+        $('#map2').live("pageshow", function() {
+                $('#map_canvas').gmap('refresh');
+        });
+        $('#map2').live("pageinit", function() {
+                $('#map_canvas').gmap({'center': '40.780551, -73.955085'});
+          
+					$('#map_canvas').gmap('addControl', 'control', google.maps.ControlPosition.RIGHT_TOP);
+					$('#map_canvas').gmap('addMarker', {'position': '40.780551, -73.955085', 'bounds': true } );                                                                                                                                                                                                                
+					
+		});	
+	
+</script>
+
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CITY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="custom.css" />
+<link rel="stylesheet" href="themes/Color.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+
+<script src="http://maps.google.com/maps/api/js?sensor=true"type="text/javascript"></script>
+<script src="plugins/jquery-ui-map-3.0-rc/ui/jquery.ui.map.js" type="text/javascript"></script>
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+
+<script src="plugins/zrssfeed-116/jquery.zrssfeed.min.js" type="text/javascript"></script>
+
+<style>
+img {height:100%; width:100%;}
+</style>
+</head>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+  $('#myfeed').rssfeed('http://feeds.reuters.com/reuters/oddlyEnoughNews', {
+    limit: 5
+  });
+});
+</script>
+
+
+
+
+
+
+
+<body>
+<!-- Start of first page -->
+	<div data-role="page" id = "page1" data-theme="a">
+		<div data-role="header">
+			<div class="center-wrapper">
+				<img src="images/New_York.jpg" class="align-center" >
+			</div>
+		</div>
+		<div
+			<h1>Welcome!</h1>
+		<div data-role="content">
+			
+			
+			<div>
+			<h1>Select Your Favourite City</h1>
+			</div>
+			</p>
+		<ul data-role="listview" data-inset="true" data-filter="true">
+			<li><a href="#page2" data-transition="slide">New York City</a></li>
+			<li><a href="#boston">Boston</a></li>
+			<li><a href="#washingtonDC">Washington D.C.</a></li>
+			
+		<div data-role="footer" data-position="fixed">
+			<div data-id="navig" data-role="navbar" data-position="fixed">
+				<ul>
+					<li><a href="#rss" ><img src="images/rssfeed.png" style ="height:50px;width:50px" /></a></li>
+					<li><a href="http://webpage.pace.edu/yt11551n/City/contact.html"><img src="images/contactus.jpg" style ="height:50px;width:50px" /></a></li>
+					<li><a href="https://www.facebook.com/iloveny"><img src="images/facebook_logo.png" style ="height:50px;width:50px" /> </a></li>
+				</ul>
+			</div>
+		</div>
+
+		</div>
+	</div>
+
+</div>
+
+<!-- Start of second page -->
+<div data-role="page" id="page2" data-theme="a">
+		<div data-role="header">
+			<h1>New York City</h1>
+		</div>
+
+		<div data-role="content">
+			<p>I LOVE NY</p>
+			<p>
+
+			</p>
+		</div>
+
+				<div data-role="collapsible">
+					
+					<h3>Manhattan</h3>
+						<div>
+						
+						<a href="#page3" data-transition="slide" id="vbutton" data-role="button" data-icon="arrow-up" data-theme="b">Restaurant</a>
+						<a href="#page4" data-transition="slide" id="vbutton" data-role="button" data-icon="arrow-up" data-theme="b">Landmarks</a>
+
+						</div>
+					
+				</div>
+				<div data-role="collapsible">
+					<h3>Brooklyn</h3>
+						<a href="#" id="vbutton" data-role="button" data-icon="arrow-up" data-theme="b">Restaurant</a> </p>
+						<a href="#" id="vbutton" data-role="button" data-icon="arrow-up" data-theme="b">Landmarks</a>
+					 
+				</div>
+
+				<div data-role="collapsible">
+					<h3>Queens</h3>
+								
+						<a href="#" id="vbutton" data-role="button" data-icon="arrow-up" data-theme="b">Restaurant</a> </p>
+						<a href="#" id="vbutton" data-role="button" data-icon="arrow-up" data-theme="b">Landmarks</a>
+				</div>
+				
+				
+				
+				
+				
+	<div data-role="content">
+			<p>I LOVE NY</p>
+			<p>
+				<a href="#page1">Back to Home Page</a>
+			</p>
+	</div>
+
+
+		
+	<div data-role="footer">
+			
+			
+			<div data-id="navig" data-role="navbar" data-position="fixed">
+				<ul>
+					<li><a href="http://webpage.pace.edu/yt11551n/City/map.html" data-ajax="false">Map</a></li>
+					<li><a href="http://webpage.pace.edu/yt11551n/City/contact.html">Contact us!</a></li>
+					<li><a href="https://www.facebook.com/iloveny">Facebook</a></li>
+				</ul>
+			</div>
+	</div>
+
+<script>
+
+$(document).ready(
+			function() {
+					
+					
+					var mapStartLatLng = new google.maps.LatLng(40.7056306,-73.9780034);
+					$('#map_canvas1').gmap({'center' : mapStartLatLng});   
+					$('#map_canvas1').gmap('addControl', 'control', google.maps.ControlPosition.RIGHT_TOP);
+					
+					$('#map_canvas1').gmap('addMarker', {'position': '40.7614409,-73.9774406', 'bounds': true } );  //Statue of Liberty                                                                                                                                                                                                              
+					$('#map_canvas1').gmap('addMarker', {'position': '40.7597085,-73.979608',  'bounds': true } );  //Rockefeller Centre                                                                                                                                                                                                              
+					$('#map_canvas1').gmap('addMarker', {'position': '40.7587598,-73.9847541', 'bounds': true } ); //Times Square                                                                                                                                                                                                              
+					$('#map_canvas1').gmap('addMarker', {'position': '40.7614409,-73.9774406', 'bounds': true } ); //MOMA 
+					$('#map_canvas1').gmap('addMarker', {'position': '40.7482663,-73.9852453', 'bounds': true } )	// Empire State Building
+					$('#map_canvas1').gmap('addMarker', {'position': '40.7813603,-73.9740723', 'bounds': true } )   //American museum of natural history
+					$('#map_canvas1').gmap('addMarker', {'position': '40.7629025,-73.9826439', 'bounds': true } )   //Central Park
+					$('#map_canvas1').gmap('addMarker', {'position': '40.7114742,-74.0132635', 'bounds': true } )	//9/11 Memorial
+					$('#map_canvas1').gmap('addMarker', {'position': '40.7794024,-73.9633858', 'bounds': true } )	//metropolitian museum
+					$('#map_canvas1').gmap('addMarker', {'position': '40.6991102,-74.0395903', 'bounds': true } )	//Ellis Island
+				
+			});
+
+</script>
+
+</div>
+
+<!-- Start of Boston page -->
+<div data-role="page" id="boston" data-theme="a">
+		<div data-role="header">
+			<h1>Boston</h1>
+		</div>
+
+		<div data-role="content">
+			<p>I LOVE Boston</p>
+			<p>
+
+			</p>
+		</div>
+
+				<div data-role="collapsible">
+					
+					<h3>Photos</h3>
+						<div>
+						
+						<img src="../City/images/boston.jpg"   /></br>
+
+						</div>
+					
+				</div>
+				<div data-role="collapsible">
+					<h3>Restaurant</h3>
+						<a href="#" id="vbutton" data-role="button" data-icon="arrow-up" data-theme="b">Neptune Oyster</a>		
+						<a href="#" id="vbutton" data-role="button" data-icon="arrow-up" data-theme="b">Yankee Lobster Fish Market</a> </p>
+				</div>
+
+				<div data-role="collapsible">
+					<h3>Landmarks</h3>
+					
+					<div data-role="collapsible">
+					
+						<h3>Harvard University</h3>
+							<div>
+						
+								<img src="../City/images/Harvard University.jpg"   /></br>
+
+							</div>
+					</div>
+					
+					<div data-role="collapsible">
+					
+						<h3>Massachusetts Institute of Technology: MIT</h3>
+							<div>
+						
+								<img src="../City/images/MIT.jpg"   /></br>
+
+							</div>
+					</div>
+					
+					<div data-role="collapsible">
+					
+						<h3>Freedom Trail</h3>
+							<div>
+						
+								<img src="../City/images/Freedom Trail1.jpg"   />
+								<img src="../City/images/Freedom Trail2.jpg"   /></br>
+							</div>
+					</div>
+
+
+				</div>
+	<div data-role="content">
+			<p>I LOVE Boston</p>
+			<p>
+				<a href="#page1">Back to Home Page</a>
+			</p>
+	</div>
+	
+	<div data-role="footer">
+			<div data-id="navig" data-role="navbar" data-position="fixed">
+				<ul>
+					
+					<li><a href="http://webpage.pace.edu/yt11551n/City/contact.html">Contact us!</a></li>
+					<li><a href="https://www.facebook.com/iHeartBoston">Facebook</a></li>
+				</ul>
+			</div>
+	</div>
+	
+</div>
+
+<!-- Start of WashingtonDC page -->
+<div data-role="page" id="washingtonDC" data-theme="a">
+		<div data-role="header">
+			<h1>Washington D.C.</h1>
+		</div>
+
+		<div data-role="content">
+			<p>I LOVE Washington D.C.</p>
+			<p>
+
+			</p>
+		</div>
+
+				<div data-role="collapsible">
+					
+					<h3>Photos</h3>
+						<div>
+						
+						<img src="../City/images/washingtonDC.jpg"   /></br>
+
+						</div>
+					
+				</div>
+				<div data-role="collapsible">
+					<h3>Restaurant</h3>
+						<a href="#" id="vbutton" data-role="button" data-icon="arrow-up" data-theme="b">Rose's Luxury</a>		
+						<a href="#" id="vbutton" data-role="button" data-icon="arrow-up" data-theme="b">Rasika</a> </p>
+				</div>
+
+				<div data-role="collapsible">
+					<h3>Landmarks</h3>
+						<div data-role="collapsible">
+					
+						<h3>United States Capitol</h3>
+						<div>
+						
+						<img src="../City/images/United States Capitol.jpg"   /></br>
+
+						</div>
+						</div>
+						
+						<div data-role="collapsible">
+						<h3>Washington Monument</h3>
+							<div>
+			
+							<img src="../City/images/Washington Monument.jpg"   /></br>
+
+							</div>
+						</div>
+						
+						<div data-role="collapsible">
+						<h3>White House</h3>
+						<div>
+						
+						<img src="../City/images/WhiteHouse.jpg"   /></br>
+
+						</div>
+						</div>
+						
+						<div data-role="collapsible">
+						<h3>Lincoln Memorial</h3>
+							<div>
+						
+								<img src="../City/images/Lincoln Memorial.jpg"   /></br>
+
+							</div>
+						</div>
+						
+				</div>
+	<div data-role="content">
+			<p>I LOVE Washington D.C.</p>
+			<p>
+				<a href="#page1">Back to Home Page</a>
+			</p>
+	</div>
+	
+	<div data-role="footer">
+			<div data-id="navig" data-role="navbar" data-position="fixed">
+				<ul>
+					
+					<li><a href="http://webpage.pace.edu/yt11551n/City/contact.html">Contact us!</a></li>
+					<li><a href="https://www.facebook.com/FacebookDC">Facebook</a></li>
+				</ul>
+			</div>
+	</div>
+	
+</div>
+
+<!-- Start of third page -->
+<div data-role="page" id="page3" data-theme="a">
+
+		<div data-role="header">
+			<h1>Restaurant</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Enjoy!</p>
+			<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Filter...">
+				<li><a href="#page5">Shake Shake</a></li>
+				<li><a href="#Gyu">Gyu-Kaku Japanese BBQ Dining</a></li>
+			</ul>
+
+			
+		
+		<div data-role="footer">
+			<div data-id="navig" data-role="navbar" data-position="fixed">
+				<ul>
+				<li><a href="#page2">Back</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- Start of fourth page -->
+<div data-role="page" id="page4" data-theme="a">
+
+		<div data-role="header">
+			<h1>Landmarks</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Enjoy!</p>
+			<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Time Square...">
+				<li><a href="http://webpage.pace.edu/yt11551n/City/map1.html" data-ajax="false">Time Square</a></li>
+				<li><a href="http://webpage.pace.edu/yt11551n/City/map2.html" data-ajax="false">Empire State Building</a></li>
+				<li><a href="#map3">Central Park</a></li>
+				<li><a href="#map4">The Metropolitan Museum of Art</a></li>
+				<li><a href="#map5">Statue of Liberty</a></li>
+			</ul>
+
+			
+		
+		<div data-role="footer">
+			<div data-id="navig" data-role="navbar" data-position="fixed">
+				<ul>
+				<li><a href="#page2">Back</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- Start of five page -->
+<div data-role="page" id="page5" data-theme="a">
+
+		<div data-role="header">
+			<h1>Shake Shake</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Shake Shack is a modern day 'roadside' burger stand serving the most delicious burgers, fries, hot dogs, frozen custard, beer, wine and more!</p>
+			
+			<div data-role="collapsible" data-mini="true"  data-collapsed="true" >
+			<h3>Photos</h3>
+				<img src="../City/images/shakeshake.jpg"   /></br>
+				
+			</div>
+			
+			<div data-role="collapsible" data-mni="true" data-collapsed="true"  >
+
+			<h3>Location</h3>	
+				<p>Southeast corner of Madison Square Park</p>
+				<p>near Madison Ave. and E.23rd St. </p></br>
+								
+				<p>49 Grand Central Terminal</p>
+				<p>Lower Level Dining Concourse</p>
+				<p>New York, NY 10017</p></br>
+								
+								<p>366 Columbus Avenue</p>
+				<p>(at West 77th St.)</p></br>
+								
+								<p>154 East 86th Street</p>
+				<p>(mid-block, between Lexington and 3rd Ave)</p></br>
+			<ul data-role="listview">
+				<li><a href="http://webpage.pace.edu/yt11551n/City/map3.html" data-ajax="false">Map</a></li>
+			
+
+			</ul>
+			</div>
+
+
+		<p><br /> </P>	
+		
+		<div data-role="footer">
+			<div data-id="navig" data-role="navbar" data-position="fixed">
+				<ul>
+				<li><a href="#page3">Back</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- Start of Gyu page -->
+<div data-role="page" id="Gyu" data-theme="a">
+
+		<div data-role="header">
+			<h1>Gyu-Kaku</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Gyu-Kaku Japanese BBQ restaurant provides a fun and interactive dining experience where customers can enjoy fresh Yakiniku BBQ right off the grill!</p>
+			
+			<div data-role="collapsible" data-mini="true"  data-collapsed="true" >
+			<h2>Photos</h2>
+				<img src="../City/images/gyukaku.jpg"   /></br>
+				<img src="../City/images/shakeshake2.jpg"   /></br>
+			</div>
+			
+			<div data-role="collapsible" data-mni="true" data-collapsed="true"  >
+
+			<h2>Location</h2>	
+								
+				<p>Gyu-Kaku Times Square</p>
+				<p>321 W. 44th St. Unit 103</p>
+				<p>New York, NY 10036</p></br>
+		
+			</div>
+
+
+		<p><br /> </P>	
+		
+		<div data-role="footer">
+			<div data-id="navig" data-role="navbar" data-position="fixed">
+				<ul>
+				<li><a href="#page3">Back</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- Start of map1 page -->
+<div data-role="page" id="map1" data-theme="a">
+		
+		<div data-role="header">
+			<h1>Time Squares</h1>
+		</div>
+		
+
+		<div data-role="content">
+			<p>Location</p>
+			
+		</div>
+
+		<div data-role="footer">
+			<div data-id="navig" data-role="navbar" data-position="fixed">
+				<ul>
+				<li><a href="#page4">Back</a></li>
+				</ul>
+			</div>
+		</div>
+		<script>
+	
+	
+</script>
+
+</div>
+
+
+
+
+
+
+<!-- Start of map2 page -->
+<body>
+<div data-role="page" id="map2" data-theme="a">
+				
+		<div data-role="header">
+			<h1>Empire State Building</h1>
+		</div>
+		
+
+		<div data-role="content">
+			<p>Location</p>
+			
+		</div>
+
+
+
+</div>
+</body>
+
+
+<!-- Start of rss feed page -->
+	<div data-role="page" id="rss" data-theme="a">
+		<div data-theme="a" data-role="header">
+		<span class="ui-title">	</span>
+			<a data-role="button" data-inline="true" data-transition="slide" href="#page1" data-icon="home" data-iconpos="left" class="ui-btn-left">Home</a>
+		</div>
+
+		<div data-role="content">
+			<p>RSS Feed</p>
+			<div id="myfeed"></div>
+		</div>
+		
+	</div>
+
+
+
+</body>
+</html>

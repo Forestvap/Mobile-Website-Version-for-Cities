@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ContactInfo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="themes/Color.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+
+<script>
+	function submitForm() {
+		var name = document.forms["formname"]["name"].value;
+		if (name == null || name == "") {
+			alert("Enter name!");
+			return false;
+		} else {
+			alert("Hello " + name);
+			return true;
+		}
+	}
+</script>
+</head>
+
+<body>
+	<div data-role="page">
+
+		<div data-role="header">
+			<h1>Contact Form</h1>
+		</div>
+
+		<div data-role="content">
+
+			<form action="http://webpage.pace.edu/yt11551n/City/result.php" method="post"
+				data-transition="pop" data-direction="reverse"
+				onsubmit="return submitForm()" name="formname" id="formnameid">
+				<fieldset>
+					<div data-role="fieldcontain">
+							<label for="nameid">Name:</label> 
+							<input type="text" name="name" id="nameid" required />
+					</div>
+					
+					<div data-role="fieldcontain">
+							<label for="ageid">Age:</label> 
+							<input type="number" name="agename" id="ageid" required placeholder="21" />
+					</div>
+
+					<div data-role="fieldcontain">
+							<label for="commentsid">Comments:</label>
+							<textarea name="comments" id="commentsid"></textarea>
+					</div>
+
+					<div data-role="fieldcontain">
+							<label for="birthid">Date of birth:</label> <input type="date"
+								id="birthid" name="birthname">
+					</div>
+
+					<div data-role="fieldcontain">
+							<label for="updatedid">Receive updates</label> 
+							<select id="updatedid"
+								name="updated" data-role="slider">
+								<option value="no">No</option>
+								<option value="yes">Yes</option>
+							</select>
+					</div>
+
+					<div data-role="fieldcontain">
+							<label for="cityName">Favourite City</label> <select id="cityName"
+								name="city">
+								<option value="1">New York City</option>
+								<option value="2">Boston</option>
+								<option value="3">Washington D.C</option>
+							</select>
+					</div>
+
+
+
+
+				
+
+					<div>Terms and conditions</div>
+						<div>
+						<label><input type="checkbox" name="checkbox-0" /> I agree </label>
+					</div>
+
+					<input type="submit" name="mysubmit" value="Contact us!" />
+
+					</div>
+				</fieldset>
+			</form>
+
+		</div>
+	</div>
+
+</body>
+</html>
